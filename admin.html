@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,18 +16,8 @@
 <body>
     <div id="particles-js"></div>
 
-    <!-- Sección de Login para Administrador -->
-    <div id="login-section">
-        <h2>Inicio de sesión - Administrador</h2>
-        <form id="login-form">
-            <input type="email" id="email" placeholder="Correo electrónico" required>
-            <input type="password" id="password" placeholder="Contraseña" required>
-            <button type="submit">Iniciar sesión</button>
-        </form>
-    </div>
-
-    <!-- Sección de Administración (oculta hasta inicio de sesión correcto) -->
-    <div id="admin-section" style="display: none;">
+    <!-- Sección de Administración -->
+    <div id="admin-section">
         <h3>👨‍🍳 Administrador</h3>
 
         <!-- Formulario para agregar un nuevo plato -->
@@ -50,12 +41,10 @@
         <div id="menu-list" class="admin"></div>
     </div>
 
-    <script src="https://www.gstatic.com/firebasejs/11.1.0/firebase-app.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/11.1.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/11.1.0/firebase-auth.js"></script>
     <script src="admin-auth.js" type="module"></script> <!-- Este script manejará la autenticación -->
     <script src="admin.js" type="module"></script> <!-- Tu código existente -->
 </body>
 
 </html>
-
-
