@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú del Restaurant</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="Imagenes/Red and Yellow Catering Flat Illustrative Food Place Logo (1).png" type="image/x-icon">
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.0.0/tsparticles.bundle.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <div id="particles-js"></div>
+  
+    <div id="loading-container" class="loading-container">
+        <img src="Imagenes/Red and Yellow Catering Flat Illustrative Food Place Logo (1).png" alt="Cargando..." class="loading-logo">
+        <p>Cargando el menú...</p>
+    </div>
+
+    <!-- Sección del Menú -->
+    <div class="menu-section">
+        <h2>🍽️ Luna Mágica 🌙</h2>
+        <div class="filter-container">
+            <input type="text" id="search" placeholder="🔍 Buscar plato..." class="search-box">
+            <select id="category-filter-select" class="category-filter">
+                <option value="">🌐 Todas las categorías</option>
+                <option value="Entradas">🥗 Entradas</option>
+                <option value="Platos principales">🍝 Platos principales</option>
+                <option value="Postres">🍰 Postres</option>
+                <option value="Bebidas">🥤 Bebidas</option>
+            </select>
+        </div>
+    </div>
+
+    <section id="menu" class="container"></section>
+
+    <!-- Modal para la descripción del plato -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <img id="modal-img" src="" alt="">
+            <h3 id="modal-title"></h3>
+            <p id="modal-description"></p>
+            <button id="orderButton" class="order-button">Pedir delivery</button>
+        </div>
+    </div>
+
+    <!-- Botón flotante para abrir el chatbot -->
+    <div class="chat-btn" id="chat-btn" onclick="toggleChat()">
+        <img src="Imagenes/chat-2389223_1280.png" alt="Chat" />
+    </div>
+
+    <div class="chat-container" id="chat-container" style="display: none;">  
+        <button class="close-btn" onclick="toggleChat()">X</button>
+        <div class="chat-box" id="chat-box"></div>
+        <div class="input-box">
+            <input type="text" id="user-input" placeholder="Escribe un mensaje..." onkeydown="if(event.key === 'Enter'){sendMessage()}">
+            <button id="send-btn" onclick="sendMessage()"> 
+                <i class="fas fa-paper-plane"></i>   
+            </button>
+        </div>
+    </div>
+
+    <script src="menu.js" type="module"></script>
+</body>
+
+</html>
