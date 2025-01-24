@@ -348,18 +348,18 @@ body {
   box-shadow: 0 4px 12px #4f3af2;
   border-radius: 10px;
   margin: 10px;
-  padding: 15px;  /* Reducir el padding general */
-  width: calc(50% - 20px);  /* En pantallas pequeñas, se ajusta a la mitad del contenedor */
-  max-width: 300px; /* Establecer un ancho máximo para evitar que los contenedores se alarguen demasiado */
+  padding: 15px;
+  width: 100%;  /* Asegura que el contenedor ocupe todo el espacio disponible */
+  max-width: 300px; /* Limita el tamaño máximo para evitar contenedores muy grandes */
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  aspect-ratio: 1 / 1;  /* Mantener el contenedor cuadrado */
+  aspect-ratio: 1 / 1; /* Mantener el contenedor cuadrado */
   position: relative;
   font-family: 'Roboto', sans-serif;
-  border: 2px solid #000000; /* Línea morada alrededor del contenedor */
+  border: 2px solid #000000;
 }
 
 /* Efecto hover en el contenedor del item */
@@ -370,35 +370,39 @@ body {
   border-color: #a29bfe; /* Cambiar el color del borde a un tono más claro al hacer hover */
 }
 
-    /* Imagen dentro del item del menú */
-    .menu-item img {
-      width: 100%;       /* Asegura que la imagen ocupe todo el ancho del contenedor */
-      height: 100%;      /* Asegura que la imagen ocupe todo el alto del contenedor */
-      object-fit: cover; /* La imagen se ajusta al contenedor sin distorsionar, pero puede recortarse */
-      border-radius: 10px;
-      margin-bottom: 5px;  /* Reducir el margen inferior */
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-      transition: transform 0.3s ease-in-out;
-    }
+/* Imagen dentro del item del menú */
+.menu-item img {
+  width: 100%;  /* Asegura que la imagen ocupe todo el ancho del contenedor */
+  height: auto; /* Mantiene la proporción de la imagen */
+  object-fit: cover; /* Ajusta la imagen sin distorsionarla */
+  border-radius: 10px;
+  margin-bottom: 5px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
 
     /* Efecto de hover en la imagen */
     .menu-item:hover img {
       transform: scale(1.05);
     }
 
-    /* Estilo para el nombre del plato */
-    .menu-item h5 {
-      margin-bottom: 3px; /* Reducir aún más el espacio entre el nombre y el precio */
-      font-size: 1.2rem;  /* Ajusta el tamaño del texto si es necesario */
-      font-weight: bold;
-    }
+ /* Estilo para el nombre del plato */
+.menu-item h5 {
+  margin-bottom: 3px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  word-wrap: break-word;  /* Ajustar texto largo a la siguiente línea */
+  overflow: hidden;  /* Ocultar el texto que se desborda */
+  text-overflow: ellipsis;  /* Añadir "..." si el texto es muy largo */
+  max-width: 100%; /* Asegura que el texto no se desborde */
+}
 
-    /* Estilo para el precio del plato */
-    .menu-item p {
-      margin-bottom: 3px; /* Reducir aún más el espacio entre el precio y el botón */
-      font-size: 1rem;    /* Ajusta el tamaño del texto si es necesario */
-      color: #555;
-    }
+/* Estilo para el precio del plato */
+.menu-item p {
+  margin-bottom: 3px;
+  font-size: 1rem;
+  color: #555;
+  word-wrap: break-word;  /* Asegura que los textos largos no se desborden */
+}
 
     /* Estilo para los botones */
     .menu-item button {
@@ -606,6 +610,27 @@ body {
         width: calc(50% - 20px);
       }
     }
+
+@media (max-width: 768px) {
+  .menu-item {
+    width: 100%; /* En pantallas pequeñas, ocupar el 100% */
+    margin: 10px 0; /* Ajustar los márgenes para pantallas pequeñas */
+  }
+
+  /* Hacer que los botones ocupen menos espacio en pantallas pequeñas */
+  .menu-item button {
+    font-size: 10px;  /* Ajustar el tamaño del texto en dispositivos móviles */
+    padding: 6px 12px;  /* Ajustar padding */
+  }
+}
+
+@media (max-width: 480px) {
+  .menu-item button {
+    font-size: 10px; /* Ajustar tamaño de texto en dispositivos móviles */
+    padding: 6px 12px; /* Ajustar padding */
+  }
+}
+
 
     /* Reset básico para márgenes y padding */
     * {
