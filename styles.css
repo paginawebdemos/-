@@ -458,31 +458,34 @@ body {
     }
      
     
-       /* Estilo para el botón dentro del item */
-    .menu-item button {
-      display: block;
-      width: 100%;
-      padding: 12px;
-      margin-top: 12px;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-      font-size: 14px;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      color: #ffffff;
-      background-color: #1a73e8;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    
-    /* Efecto hover en el botón */
-    .menu-item button:hover {
-      background-color: #174ea6;
-      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-      transform: translateY(-3px);
-    }
+/* Contenedor principal de los items del menú */
+.menu-item {
+  background-color: #fff;
+  box-shadow: 0 4px 12px rgb(0, 0, 0);  
+  border-radius: 10px;
+  margin: 10px;
+  padding: 15px;  /* Reducir el padding general */
+  width: calc(50% - 20px);  /* En pantallas pequeñas, se ajusta a la mitad del contenedor */
+  max-width: 300px; /* Establecer un ancho máximo para evitar que los contenedores se alarguen demasiado */
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  aspect-ratio: 1 / 1;  /* Mantener el contenedor cuadrado */
+  position: relative;
+  font-family: 'Roboto', sans-serif;
+  border: 2px solid #6c5ce7; /* Línea morada alrededor del contenedor */
+}
+
+/* Efecto hover en el contenedor del item */
+.menu-item:hover {
+  transform: translateY(-5px);
+  background-color: #f9f9f9;  
+  box-shadow: 0 4px 12px rgb(0, 0, 0);  
+  border-color: #a29bfe; /* Cambiar el color del borde a un tono más claro al hacer hover */
+}
+
     
      
     @media (max-width: 768px) {
