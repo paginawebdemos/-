@@ -4,211 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bienvenido a Luna Mágica</title>
-      <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="Imagenes/Red and Yellow Catering Flat Illustrative Food Place Logo (1).png" type="image/x-icon">
     <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.0.0/tsparticles.bundle.min.js"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <style>
-        body {
-            margin: 0;
-            font-family: 'Arial', sans-serif;
-            background-color: #000000;
-            color: #333;
-            text-align: center;
-        }
-
-        #welcome-container {
-    max-width: 900px;
-    margin: 50px auto;
-    padding: 30px;
-    background-color: #ffffff;
-    border-radius: 12px;
-    box-shadow: 0 30px 70px rgba(0, 0, 0, 0.3); /* Sombra intensa */
-    text-align: center;
-    position: relative;
-    background: linear-gradient(145deg, #ffffff, #f9f9f9);
-    opacity: 0;
-    transform: rotateY(90deg) translateZ(-500px); /* Empieza fuera de la vista, girado */
-    animation: fadeInUp 1s ease-out forwards; /* Animación de entrada */
-  }
-  
-  /* Estilo para la descripción del negocio */
-  .business-description {
-    font-size: 1.1em; /* Tamaño de texto adecuado */
-    color: #34495e; /* Color de texto que contraste bien con el fondo */
-    margin-bottom: 20px; /* Espaciado inferior para que no se junte con el siguiente contenido */
-    text-align: center; /* Centrar la descripción */
-    line-height: 1.5; /* Mejor legibilidad */
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para el texto */
-  }
-  
-  
-  /* Animación de entrada con giro desde atrás hacia adelante */
-  @keyframes fadeInUp {
-    0% {
-        opacity: 0;
-        transform: rotateY(90deg) translateZ(-500px); /* Empieza hacia atrás y desplazado */
-    }
-    100% {
-        opacity: 1;
-        transform: rotateY(0) translateZ(0); /* Termina en la posición normal */
-    }
-  }
-  
-  h1, p {
-      font-size: 1.2em;
-      line-height: 1.6;
-      color: #4f5d75;
-      margin-bottom: 20px;
-      text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2); /* Sombra mucho más marcada para los textos */
-  }
-  
-  h1 {
-      font-size: 2.5em;
-      color: #2c3e50;
-      text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4); /* Sombra mucho más intensa para el título */
-  }
-  
-  p {
-      font-size: 1.2em;
-  }
-  
-  /* Estilos para los botones */
-  .button-container {
-      margin-top: 30px;
-      display: flex;
-      justify-content: center;
-      gap: 25px;
-  }
-  
-  .welcome-button {
-      text-decoration: none;
-      padding: 15px 30px;
-      font-size: 1.2em;
-      color: #fff;
-      background-color: #001bb7;
-      border-radius: 50px;
-      transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
-      box-shadow: 0 15px 30px rgb(0, 0, 0); /* Sombra fuerte para los botones */
-      font-weight: bold;
-      position: relative;
-  }
-  
-  .welcome-button:hover {
-      background-color: #000000;
-      transform: translateY(-6px);
-      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5); /* Sombra más profunda y difusa al hacer hover */
-  }
-  
-  .welcome-button:active {
-      transform: translateY(3px); /* Efecto de presión al hacer clic */
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
-  }
-  
-  /* Descripción de los botones */
-  .button-description {
-      margin-top: 40px;
-      background-color: #ecf0f1;
-      padding: 20px;
-      border-radius: 12px;
-      font-size: 1.05em;
-      color: #616161;
-      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); /* Sombra más intensa en la descripción */
-  }
-  
-  .button-description strong {
-      color: #f39c12;
-  }
-  
-  /* Estilos responsivos para dispositivos móviles */
-  @media (max-width: 768px) {
-    #welcome-container {
-        max-width: 85%; /* Reducir el ancho del contenedor en dispositivos móviles */
-    }
-  
-    h1 {
-        font-size: 1.6em !important; /* Reducir el tamaño del título en dispositivos pequeños */
-    }
-  
-    p {
-        font-size: 0.9em !important;
-    }
-  
-    .button-container {
-        flex-direction: column;
-        align-items: center;
-        gap: 15px;
-    }
-  
-    .welcome-button {
-        width: 90%;
-        padding: 12px;
-        font-size: 1em;
-    }
-  
-    .button-description {
-        font-size: 0.85em !important;
-        padding: 15px;
-    }
-  
-    .button-description p {
-        font-size: 0.9em !important;
-    }
-  
-    .button-description strong {
-        font-size: 1em !important;
-    }
-  
-    .admin-button {
-        font-size: 1.2em;
-        padding: 10px 20px;
-    }
-  }
-  
-  /* Estilos generales para las redes sociales */
-  .social-media {
-    text-align: center;
-    margin-top: 2rem;
-  }
-  
-  .social-icon {
-    display: inline-block;
-    margin: 0 1rem;
-    font-size: 2rem;
-    color: #333;
-    text-decoration: none;
-    transition: color 0.3s ease, transform 0.3s ease;
-  }
-  
-  /* Efecto hover para cambiar color */
-  .social-icon:hover {
-    color: #4a90e2; /* Color de cambio al pasar el ratón */
-    transform: scale(1.1); /* Aumenta el tamaño del icono ligeramente */
-  }
-  
-  /* Colores específicos para cada red social */
-  .instagram {
-    color: #E1306C;
-  }
-  
-  .instagram:hover {
-    color: #C13584; /* Cambio de color en hover */
-  }
-  
-  .facebook {
-    color: #3b5998;
-  }
-  
-  .facebook:hover {
-    color: #1d3557; /* Cambio de color en hover */
-  }
-  
-  /* Asegura que en dispositivos móviles los íconos se vean bien centrados */
-  @media (max-width: 768px) {
-    .social-icon {
-        font-size: 1.8rem; /* Reducir tamaño en dispositivos móviles */
-    }
-  }
+        /* Estilos omitidos para mantener el foco en el código */
     </style>
 </head>
 <body>
@@ -218,14 +19,14 @@
     <div id="welcome-container">
         <h1>Bienvenido a Luna Mágica 🌙🍽️</h1>
         
-        <div class="button-container">
-            <a href="menu-delivery.html" class="welcome-button">Ver Menú de Delivery</a>
-            <a href="menu-restaurante.html" class="welcome-button">Ver Menú en Restaurante</a>
+        <div class="action-container">
+            <a href="menu-delivery.html" class="menu-link">Ver Menú de Delivery</a>
+            <a href="menu-restaurante.html" class="menu-link">Ver Menú en Restaurante</a>
         </div>
         
-        <div class="button-description">
-            <p><strong>Botón "Ver Menú de Delivery":</strong> Si prefieres pedir comida desde tu casa o lugar de trabajo, selecciona este botón. Te llevará a nuestro menú de delivery donde podrás hacer tu pedido cómodamente.</p>
-            <p><strong>Botón "Ver Menú en Restaurante":</strong> Si ya estás en nuestro restaurante y deseas ver los platos disponibles para comer aquí, elige este botón. ¡Te mostraremos todos los deliciosos platillos que tenemos para ti!</p>
+        <div class="menu-description">
+            <p><strong>Opción "Ver Menú de Delivery":</strong> Si prefieres pedir comida desde tu casa o lugar de trabajo, selecciona esta opción. Te llevará a nuestro menú de delivery donde podrás hacer tu pedido cómodamente.</p>
+            <p><strong>Opción "Ver Menú en Restaurante":</strong> Si ya estás en nuestro restaurante y deseas ver los platos disponibles para comer aquí, elige esta opción. ¡Te mostraremos todos los deliciosos platillos que tenemos para ti!</p>
         </div>
         
         <div class="social-media">
@@ -244,3 +45,4 @@
     </footer>
 </body>
 </html>
+
