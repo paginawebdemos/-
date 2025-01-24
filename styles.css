@@ -402,14 +402,16 @@ body {
 
     /* Estilo para los botones */
     .menu-item button {
-      margin-top: 5px;  /* Reducir el espacio entre el precio y el botón */
-      padding: 10px 20px;  /* Ajustar el padding del botón para que no sea tan grande */
+      margin-top: 10px;  /* Aumentar el espacio entre los botones y los elementos anteriores */
+      padding: 8px 16px;  /* Ajustar el padding para hacer los botones más finitos */
       background-color: #007bff;
       color: white;
       border: none;
       border-radius: 5px;
       cursor: pointer;
-      font-size: 14px;  /* Aumentar ligeramente el tamaño de la fuente */
+      font-size: 14px;  /* Tamaño de fuente adecuado */
+      width: 100%;  /* Hacer que el botón ocupe todo el ancho del contenedor */
+      transition: background-color 0.3s ease;
     }
 
     .menu-item button:hover {
@@ -515,6 +517,7 @@ body {
       cursor: pointer;
       width: 100%;
       transition: background-color 0.3s ease;
+      margin-bottom: 10px;  /* Aumentar separación entre los botones */
     }
 
     .read-more-button:hover {
@@ -608,6 +611,7 @@ body {
       padding: 0;
       box-sizing: border-box;
     }
+
 
 
     
