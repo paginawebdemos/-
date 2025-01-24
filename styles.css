@@ -412,6 +412,7 @@ body {
       font-size: 12px;  /* Reducir el tamaño de fuente */
       width: 100%;  /* Hacer que el botón ocupe todo el ancho del contenedor */
       transition: background-color 0.3s ease;
+      font-weight: bold;  /* Poner el texto en negrita */
     }
 
     .menu-item button:hover {
@@ -518,6 +519,7 @@ body {
       width: 100%;
       transition: background-color 0.3s ease;
       margin-bottom: 10px;  /* Aumentar separación entre los botones */
+      font-weight: bold;  /* Poner el texto en negrita */
     }
 
     .read-more-button:hover {
@@ -611,7 +613,6 @@ body {
       padding: 0;
       box-sizing: border-box;
     }
-
 
 
     
